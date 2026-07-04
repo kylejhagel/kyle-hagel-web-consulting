@@ -1,0 +1,21 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.body-copy p {
+  margin: 0 0 1rem;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 860px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}

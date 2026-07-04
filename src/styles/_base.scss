@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--color-primary);
+  text-underline-offset: 0.18em;
+
+  &:hover {
+    color: var(--color-primary-dark);
+  }
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+  border-radius: 0.25rem;
+}
+
+main {
+  overflow: hidden;
+}
+
+section {
+  scroll-margin-top: 6rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+  margin: 0;
+}
+
+h1 {
+  max-width: 13ch;
+  font-size: clamp(3rem, 8vw, 6rem);
+}
+
+h2 {
+  font-size: clamp(2.1rem, 5vw, 3.6rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 3vw, 1.45rem);
+}
+
+@media (max-width: 860px) {
+  h1 {
+    max-width: 12ch;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
