@@ -1,6 +1,7 @@
 import Header from './components/Header/Header.jsx';
 import Hero from './components/Hero/Hero.jsx';
 import Background from './components/Background/Background.jsx';
+import Consultation from './components/Consultation/Consultation.jsx';
 import EmployerTimeline from './components/EmployerTimeline/EmployerTimeline.jsx';
 import { employers } from './data/employers.js';
 import Services from './components/Services/Services.jsx';
@@ -15,10 +16,11 @@ function App() {
 
       <main id="main">
         <Hero />
-        <Background />     
-        <EmployerTimeline employers={employers} /> 
+        <Background />
+        <EmployerTimeline employers={employers} />
         <Services />
         <Resume />
+        <Consultation />
         <CTA />
       </main>
 

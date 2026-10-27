@@ -1,0 +1,135 @@
+.consultation {
+  background:
+    radial-gradient(circle at top left, rgba(31, 95, 85, 0.08), transparent 34rem),
+    var(--color-bg);
+}
+
+.consultation-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.consultation-copy {
+  p {
+    max-width: 72ch;
+    color: var(--color-muted);
+    font-size: 1.05rem;
+    margin: 1rem 0 0;
+  }
+}
+
+.consultation-lead {
+  font-size: clamp(1.15rem, 2vw, 1.32rem) !important;
+}
+
+.consultation-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 2rem;
+}
+
+.consultation-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  box-shadow: 0 24px 60px var(--color-shadow);
+}
+
+.consultation-card__header {
+  h3 {
+    margin-top: 1rem;
+  }
+
+  p {
+    color: var(--color-muted);
+    margin: 0.85rem 0 0;
+  }
+}
+
+.consultation-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  border-radius: 999px;
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  padding: 0.35rem 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 850;
+}
+
+.consultation-card__price {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+
+  span {
+    color: var(--color-primary-dark);
+    font-weight: 850;
+  }
+}
+
+.consultation-card__section {
+  margin-top: 1.5rem;
+
+  h4 {
+    margin: 0 0 0.75rem;
+    color: var(--color-text);
+    font-size: 1rem;
+    letter-spacing: -0.025em;
+  }
+
+  ul {
+    display: grid;
+    gap: 0.65rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+    color: var(--color-muted);
+    padding-left: 1.65rem;
+
+    &::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--color-primary);
+      font-weight: 900;
+    }
+  }
+}
+
+.consultation-boundary {
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-muted);
+
+  strong {
+    color: var(--color-text);
+  }
+}
+
+@media (max-width: 900px) {
+  .consultation-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .consultation-actions {
+    flex-direction: column;
+  }
+}
